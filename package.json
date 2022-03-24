@@ -3,6 +3,20 @@
   "version": "0.0.1",
   "description": "your app description",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nekosse/electron-markdown-editor-tutorial.git"
+  },
+  "keywords": [
+    "Markdown",
+    "remark",
+    "CodeMirror",
+    "Electron",
+    "Vite",
+    "TypeScript"
+  ],
+  "author": "Léo pinot",
+  "license": "MIT",
   "engines": {
     "node": ">=v16.13",
     "npm": ">=8.1"
