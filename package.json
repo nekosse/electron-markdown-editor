@@ -75,5 +75,11 @@
     "sqlite3": "^5.0.2",
     "styled-component": "^2.8.0",
     "styled-components": "^5.3.3"
+  },
+  "build": {
+    "appId": "jardin.strator",
+    "mac": {
+      "category": "your.app.category.type"
+    }
   }
 }
