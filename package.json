@@ -28,7 +28,9 @@
     "typecheck:preload": "tsc --noEmit -p packages/preload/tsconfig.json",
     "typecheck": "npm run typecheck:main && npm run typecheck:preload && npm run typecheck:renderer",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "pack-win": "electron-builder --dir --win",
+    "dist-win": "electron-builder --win"
   },
   "devDependencies": {
     "@types/react": "^17.0.41",
@@ -80,6 +82,11 @@
     "appId": "jardin.strator",
     "mac": {
       "category": "your.app.category.type"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ]
     }
   }
 }
