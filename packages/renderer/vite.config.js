@@ -3,7 +3,9 @@
 import {chrome} from '../../.electron-vendors.cache.json';
 import {join} from 'path';
 import {builtinModules} from 'module';
-import vue from '@vitejs/plugin-vue';
+
+
+
 
 const PACKAGE_ROOT = __dirname;
 
@@ -19,7 +21,6 @@ const config = {
       '/@/': join(PACKAGE_ROOT, 'src') + '/',
     },
   },
-  plugins: [vue()],
   base: '',
   server: {
     fs: {
@@ -43,6 +44,7 @@ const config = {
   test: {
     environment: 'happy-dom',
   },
+
 };
 
 export default config;
