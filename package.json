@@ -83,9 +83,26 @@
   },
   "build": {
     "appId": "jardin.strator",
+    "productName": "electron-markdown-editor-tutorial",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "nekosse",
+        "repo": "electron-markdown-editor-tutorial"
+      }
+    ],
     "win": {
+      "publish": [
+        "github"
+      ],
       "target": [
-        "zip"
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
       ]
     }
   }
