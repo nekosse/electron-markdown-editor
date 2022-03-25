@@ -1,8 +1,8 @@
 import { browserWindow } from './mainWindow'
 
-const sqlite3 = require('sqlite3').verbose()
+//const sqlite3 = require('sqlite3').verbose()
 
-const db = new sqlite3.Database(
+/*const db = new sqlite3.Database(
   'tutelle.db',
   sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
   (err: { message: any }) => {
@@ -11,10 +11,10 @@ const db = new sqlite3.Database(
     }
     console.log('Connected to the tutelle database.')
   }
-)
+)*/
 
 export function initDB() {
-  db.serialize(function () {
+  /*db.serialize(function () {
     try {
       db.run('CREATE TABLE IF NOT EXISTS  mails (adresse TEXT)')
 
@@ -41,11 +41,11 @@ export function initDB() {
     } catch (error) {
       console.error(error)
     }
-  })
+  })*/
 }
 
 export function closeDB() {
-  db.close()
+  //db.close()
 }
 
 export async function sendMailList() {
@@ -55,10 +55,11 @@ export async function sendMailList() {
 }
 
 function request() {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     const mailList: string[] = []
+    resolve(mailList)
 
-    db.each(
+    /*db.each(
       'SELECT rowid AS id, adresse FROM mails',
       function (err: any, row: { id: string; adresse: string }) {
         if (err) reject(err)
@@ -72,6 +73,6 @@ function request() {
           reject(err)
         } else resolve(mailList)
       }
-    )
+    )*/
   })
 }
