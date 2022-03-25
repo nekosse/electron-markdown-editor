@@ -88,7 +88,9 @@
       {
         "provider": "github",
         "owner": "nekosse",
-        "repo": "electron-markdown-editor-tutorial"
+        "repo": "electron-markdown-editor-tutorial",
+        "token": "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",
+        "private": true
       }
     ],
     "win": {
